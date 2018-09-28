@@ -2,20 +2,41 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using System;
 
 public class Capture : MonoBehaviour {
-    public int Width = 2550;
-    public int Height = 3300;
+    public static int Width = 2550;
+    public static int Height = 3300;
     public Camera camera;
+    public float[] range;
+    public int size = 10;
     private bool photocap = false;
     
 
     public static string ScreenShotName(int width, int height)
     {
-        return string.Format("{0}/screenshots/CameraPhoto{1}x{2}_{3}.png",
-                             Application.dataPath,
-                             width, height,
-                             System.DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss"));
+       
+
+        
+        return string.Format("{0}/screenshots/photo0.png",
+                         Application.dataPath);
+
+        
+
+    }
+
+  
+
+    private void Start()
+    {
+        
+        range[0] = 0f;
+        range[1] = 1f;
+        range[2] = 2f;
+        range[3] = 3f;
+        range[4] = 4f;
+        range[5] = 5f;
+        range[6] = 6f;
     }
 
     public void TakeHiResShot()
