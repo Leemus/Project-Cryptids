@@ -8,18 +8,22 @@ public class Capture : MonoBehaviour {
     public static int Width = 2550;
     public static int Height = 3300;
     public Camera camera;
+    public RawImage[] canvas;
     public float[] range;
     public int size = 10;
+    public static float file = -1;
+
     private bool photocap = false;
     
 
     public static string ScreenShotName(int width, int height)
     {
-       
 
+
+           
         
-        return string.Format("{0}/screenshots/photo0.png",
-                         Application.dataPath);
+        return string.Format("{0}/screenshots/photo{1}.png",
+                         Application.dataPath, file += 1);
 
         
 
@@ -56,7 +60,7 @@ public class Capture : MonoBehaviour {
             RenderTexture.active = rt;
             screenShot.ReadPixels(new Rect(0, 0, Width, Height), 0, 0);
             camera.targetTexture = null;
-            RenderTexture.active = null; // JC: added to avoid errors
+            RenderTexture.active = null;
             Destroy(rt);
             byte[] bytes = screenShot.EncodeToPNG();
             string filename = ScreenShotName(Width, Height);
