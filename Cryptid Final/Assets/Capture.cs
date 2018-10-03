@@ -22,8 +22,8 @@ public class Capture : MonoBehaviour {
 
            
         
-        return string.Format("{0}/screenshots/photo{1}.png",
-                         Application.dataPath, file += 1);
+        return string.Format("{0}/Resources/photo{1}.png",
+                         Application.dataPath, file+= 1);
 
         
 
@@ -40,7 +40,7 @@ public class Capture : MonoBehaviour {
         range[3] = 3f;
         range[4] = 4f;
         range[5] = 5f;
-        range[6] = 6f;
+
     }
 
     public void TakeHiResShot()
