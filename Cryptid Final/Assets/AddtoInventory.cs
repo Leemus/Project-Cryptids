@@ -16,7 +16,7 @@ public class AddtoInventory : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         AddtoCanvas();
-      //  photos[0] = (Texture)UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Resources/screenshots/photo0.png", typeof(Texture));
+        photos[0] = Resources.Load<Texture>("Photo0");
       //  photos[1] = (Texture)UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Resources/screenshots/photo1.png", typeof(Texture));
       //  photos[2] = (Texture)UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Resources/screenshots/photo2.png", typeof(Texture));
       //  photos[3] = (Texture)UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Resources/screenshots/photo3.png", typeof(Texture));
@@ -28,7 +28,7 @@ public class AddtoInventory : MonoBehaviour {
     void AddtoCanvas()
     {
         
-      //  canvas[0].texture = photos[0];
+       canvas[0].texture = photos[0];
       //  canvas[1].texture = photos[1];
        // canvas[2].texture = photos[2];
       //  canvas[3].texture = photos[3];

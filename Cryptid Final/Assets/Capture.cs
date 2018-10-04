@@ -5,8 +5,8 @@ using UnityEngine;
 using System;
 
 public class Capture : MonoBehaviour {
-    public static int Width = 2550;
-    public static int Height = 3300;
+    public static int Width = 1920;
+    public static int Height = 1080;
     public Camera camera;
     public RawImage[] canvas;
     public float[] range;
@@ -14,41 +14,22 @@ public class Capture : MonoBehaviour {
     public static float file = -1;
 
     private bool photocap = false;
-    
 
-    public static string ScreenShotName(int width, int height)
+
+  public static string ScreenShotName(int width, int height)
     {
 
 
-           
-        
-        return string.Format("{0}/Resources/photo{1}.png",
-                         Application.dataPath, file+= 1);
 
-        
+      return string.Format("{0}/Resources/Photo{1}.png",
+                       Application.dataPath, file += 1);
 
-    }
 
-  
 
-    private void Start()
-    {
-        
-        range[0] = 0f;
-        range[1] = 1f;
-        range[2] = 2f;
-        range[3] = 3f;
-        range[4] = 4f;
-        range[5] = 5f;
 
     }
 
-    public void TakeHiResShot()
-    {
-        photocap = true;
-    }
-
-    void LateUpdate()
+    public void Update()
     {
         photocap |= Input.GetMouseButtonDown(0);
         if (photocap)
@@ -69,4 +50,23 @@ public class Capture : MonoBehaviour {
             photocap = false;
         }
     }
+
+    private void Start()
+    {
+        
+        range[0] = 0f;
+        range[1] = 1f;
+        range[2] = 2f;
+        range[3] = 3f;
+        range[4] = 4f;
+        range[5] = 5f;
+
+    }
+
+    public void TakeHiResShot()
+    {
+        photocap = true;
+    }
+
+    
 }
