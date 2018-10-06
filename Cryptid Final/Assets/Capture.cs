@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using Fungus;
 using System;
 
 public class Capture : MonoBehaviour {
@@ -11,6 +12,7 @@ public class Capture : MonoBehaviour {
     public RawImage[] canvas;
     public float[] range;
     public int size = 10;
+    public Flowchart camDev;
     public static float file = -1;
 
     private bool photocap = false;
@@ -48,6 +50,13 @@ public class Capture : MonoBehaviour {
             System.IO.File.WriteAllBytes(filename, bytes);
             Debug.Log(string.Format("Took screenshot to: {0}", filename));
             photocap = false;
+            
+        }
+
+        if (Input.GetMouseButton(0))
+        {
+
+          //  camDev.SetFloatVariable("camPhotos", +1);
         }
     }
 

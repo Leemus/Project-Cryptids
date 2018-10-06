@@ -13,13 +13,15 @@ public class CameraDeveloper : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        
 	}
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.name == "Player")
         {
+
+            
             cameraDev.SendFungusMessage("interact");
 
         }
