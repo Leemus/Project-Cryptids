@@ -775,6 +775,22 @@ Prefab:
       propertyPath: camDev
       value: 
       objectReference: {fileID: 1942903354}
+    - target: {fileID: 4646740164085784, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.25432253
+      objectReference: {fileID: 0}
+    - target: {fileID: 4646740164085784, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.96711946
+      objectReference: {fileID: 0}
+    - target: {fileID: 4646740164085784, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4646740164085784, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
   m_IsPrefabAsset: 0
@@ -1017,6 +1033,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1552711674021422, guid: 7737647c22c1fc64a88d5cd030c352ce,
     type: 2}
   m_PrefabInternal: {fileID: 1072775251}
+--- !u!20 &1472817306 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 20385289327800832, guid: 7737647c22c1fc64a88d5cd030c352ce,
+    type: 2}
+  m_PrefabInternal: {fileID: 1072775251}
 --- !u!114 &1472817311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1041,6 +1062,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 11400000, guid: cbde9e81cb47e8641ba674a1a2c8addd, type: 2}
+  photo: {fileID: 1472817306}
 --- !u!1 &1540585823
 GameObject:
   m_ObjectHideFlags: 0
