@@ -56,7 +56,7 @@ public class Capture : MonoBehaviour {
         if (Input.GetMouseButton(0))
         {
 
-          //  camDev.SetFloatVariable("camPhotos", +1);
+          camDev.SetFloatVariable("camPhotos", +1);
         }
     }
 

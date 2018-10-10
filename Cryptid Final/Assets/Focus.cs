@@ -30,6 +30,7 @@ public class Focus : MonoBehaviour {
             
            
             val += 0.1f;
+       
 
         }
 

@@ -6,13 +6,13 @@ public class CamSwitch : MonoBehaviour {
 
     public Camera mainCam;
     public Camera photoCam;
-    public Camera invCam;
+
     // Use this for initialization
     void Start()
     {
         mainCam.enabled = true;
         photoCam.enabled = false;
-        invCam.enabled = false;
+   
     }
 
     // Update is called once per frame
@@ -24,7 +24,7 @@ public class CamSwitch : MonoBehaviour {
         {
             mainCam.enabled = false;
             photoCam.enabled = true;
-            invCam.enabled = false;
+
 
         }
 
@@ -33,16 +33,10 @@ public class CamSwitch : MonoBehaviour {
         {
             mainCam.enabled = true;
             photoCam.enabled = false;
-            invCam.enabled = false;
+
 
         }
 
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            mainCam.enabled = false;
-            photoCam.enabled = false;
-            invCam.enabled = true;
-
-        }
+   
     }
 }
