@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEditor;
 using Fungus;
 using System;
 
@@ -26,7 +27,7 @@ public class Capture : MonoBehaviour {
       return string.Format("{0}/Resources/Photo{1}.png",
                        Application.dataPath, file += 1);
 
-
+        AssetDatabase.Refresh();
 
 
     }

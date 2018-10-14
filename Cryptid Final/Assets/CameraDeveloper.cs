@@ -2,19 +2,21 @@
 using System.Collections.Generic;
 using Fungus;
 using UnityEngine;
+using UnityEditor;
 
 public class CameraDeveloper : MonoBehaviour {
     public Flowchart cameraDev;
     public Texture[] photos;
     public BooleanVariable photosCollected; 
 
-	// Use this for initialization
+
 	void Start () {
 		
 	}
 	
-	// Update is called once per frame
+
 	void Update () {
+     
         photos[0] = Resources.Load<Texture>("Photo0");
         photos[1] = Resources.Load<Texture>("Photo1");
         photos[2] = Resources.Load<Texture>("Photo2");
@@ -24,9 +26,11 @@ public class CameraDeveloper : MonoBehaviour {
 
         if (cameraDev.GetBooleanVariable("photosCollected") == true)
         {
-
+            AssetDatabase.Refresh();
 
         }
+
+       
         
     }
 
