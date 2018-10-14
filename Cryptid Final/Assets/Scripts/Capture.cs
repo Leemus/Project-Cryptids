@@ -15,7 +15,8 @@ public class Capture : MonoBehaviour {
     public int size = 10;
     public Flowchart camDev;
     public static float file = -1;
-
+    public AudioSource click;
+            
     private bool photocap = false;
 
 
@@ -51,7 +52,7 @@ public class Capture : MonoBehaviour {
             System.IO.File.WriteAllBytes(filename, bytes);
             Debug.Log(string.Format("Took screenshot to: {0}", filename));
             photocap = false;
-            
+            click.Play();
         }
 
         if (Input.GetMouseButton(0))

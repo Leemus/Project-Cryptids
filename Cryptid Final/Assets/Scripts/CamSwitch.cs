@@ -7,11 +7,13 @@ public class CamSwitch : MonoBehaviour {
     public Camera mainCam;
     public Camera photoCam;
 
+
     // Use this for initialization
     void Start()
     {
         mainCam.enabled = true;
         photoCam.enabled = false;
+   
    
     }
 
