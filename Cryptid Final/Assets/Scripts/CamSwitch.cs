@@ -6,6 +6,7 @@ public class CamSwitch : MonoBehaviour {
 
     public Camera mainCam;
     public Camera photoCam;
+   
 
 
     // Use this for initialization
@@ -13,6 +14,7 @@ public class CamSwitch : MonoBehaviour {
     {
         mainCam.enabled = true;
         photoCam.enabled = false;
+    
    
    
     }
@@ -26,6 +28,7 @@ public class CamSwitch : MonoBehaviour {
         {
             mainCam.enabled = false;
             photoCam.enabled = true;
+          
 
 
         }
@@ -35,6 +38,7 @@ public class CamSwitch : MonoBehaviour {
         {
             mainCam.enabled = true;
             photoCam.enabled = false;
+            
 
 
         }

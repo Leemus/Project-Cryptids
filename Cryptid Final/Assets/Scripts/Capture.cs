@@ -10,12 +10,14 @@ public class Capture : MonoBehaviour {
     public static int Width = 1920;
     public static int Height = 1080;
     public Camera camera;
+    public bool camOn;
     public RawImage[] canvas;
     public float[] range;
     public int size = 10;
     public Flowchart camDev;
     public static float file = -1;
     public AudioSource click;
+    
             
     private bool photocap = false;
 
@@ -32,11 +34,11 @@ public class Capture : MonoBehaviour {
 
 
     }
-
+   
     public void Update()
     {
         photocap |= Input.GetMouseButtonDown(0);
-        if (photocap)
+        if (photocap && camOn == true)
         {
             RenderTexture rt = new RenderTexture(Width, Height, 24);
             camera.targetTexture = rt;
@@ -55,16 +57,32 @@ public class Capture : MonoBehaviour {
             click.Play();
         }
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && camOn == true)
         {
 
           camDev.SetFloatVariable("camPhotos", +1);
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            camOn = false;
+
+
+
+        }
+         if (Input.GetKeyDown(KeyCode.Q))
+        {
+            camOn = true;
+
+
+
         }
     }
 
     private void Start()
     {
-        
+        camOn = false;
+
         range[0] = 0f;
         range[1] = 1f;
         range[2] = 2f;
