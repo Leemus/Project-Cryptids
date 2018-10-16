@@ -17,6 +17,7 @@ public class Capture : MonoBehaviour {
     public Flowchart camDev;
     public static float file = -1;
     public AudioSource click;
+    public bool hasFilm;
     
             
     private bool photocap = false;
@@ -37,6 +38,18 @@ public class Capture : MonoBehaviour {
    
     public void Update()
     {
+        if (camDev.GetBooleanVariable("hasPhotos") == true)
+        {
+
+            hasFilm = false;
+
+        }
+        else
+        {
+
+            hasFilm = true;
+
+        }
         photocap |= Input.GetMouseButtonDown(0);
         if (photocap && camOn == true)
         {
@@ -57,7 +70,7 @@ public class Capture : MonoBehaviour {
             click.Play();
         }
 
-        if (Input.GetMouseButton(0) && camOn == true)
+        if (Input.GetMouseButton(0) && camOn == true && hasFilm == true)
         {
 
           camDev.SetFloatVariable("camPhotos", +1);
