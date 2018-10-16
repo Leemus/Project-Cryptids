@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using Fungus;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEditor;
 
 public class DevShop : MonoBehaviour {
     public Flowchart dev;
+    public Flowchart collect;
     public Camera devCam;
-    public GameObject[] hasPhotos;
-	// Use this for initialization
-	void Start () {
+    public GameObject hasPhotos0,hasPhotos1,hasPhotos2;
+    public RawImage hasPhotos00, hasPhotos01, hasPhotos02;
+    // Use this for initialization
+    void Start () {
         devCam.enabled = false;
-
+        collect.enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -27,26 +30,42 @@ public class DevShop : MonoBehaviour {
 
         }
 
-        if(dev.GetBooleanVariable("givePhotos") == true)
+        if(collect.GetBooleanVariable("givePhotos") == true)
         {
             AssetDatabase.Refresh();
             if(dev.GetFloatVariable("camPhotos") >= 0)
             {
-                hasPhotos[0].active = true;
+                hasPhotos00.texture = Resources.Load<Texture2D>("Resources/Photo0)");
+
+                hasPhotos0.active = true;
+                
+
+
             }
             if(dev.GetFloatVariable("camPhotos") >= 1)
             {
+                hasPhotos01.texture = Resources.Load<Texture2D>("Photo1)");
 
-                hasPhotos[1].active = true;
+                hasPhotos1.active = true;
             }
             if(dev.GetFloatVariable("camPhotos") >= 2)
             {
-                hasPhotos[2].active = true;
+                hasPhotos02.texture = Resources.Load<Texture2D>("Photo2)");
+                hasPhotos2.active = true;
 
             }
             
+            
+        }
+
+        if(dev.GetBooleanVariable("photoReady") == true)
+        {
+
+            dev.enabled = false;
+            collect.enabled = true;
 
         }
+
 
       
 	}
@@ -55,7 +74,7 @@ public class DevShop : MonoBehaviour {
     {
         if(other.gameObject.name == "Player")
         {
-
+            collect.SendFungusMessage("talk");
             dev.SendFungusMessage("talk");
         }
     }

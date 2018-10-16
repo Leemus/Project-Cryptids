@@ -109,7 +109,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 53
+  controlID: 113
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 54
+  controlID: 114
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 55
+  controlID: 115
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -416,10 +416,10 @@ MonoBehaviour:
     height: 336
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 422c0000
-    m_LastClickedID: 11330
-    m_ExpandedIDs: 348cffffe2fbffff000000009c2b0000262d0000
+    scrollPos: {x: 0, y: 81}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: dafbffff00000000dc2a0000b62b00005a2d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -469,14 +469,14 @@ MonoBehaviour:
     height: 336
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 11377.999712616293
+  lastFramingTime: 11749.69557952049
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 237.86353, y: 87.85365, z: 251.98154}
+    m_Target: {x: 200.9, y: 86.39, z: 297.35}
     speed: 2
-    m_Value: {x: 237.86353, y: 87.85365, z: 251.98154}
+    m_Value: {x: 200.9, y: 86.39, z: 297.35}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -504,13 +504,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.09221639, y: -0.88404584, z: 0.19704731, w: 0.4137097}
+    m_Target: {x: -0.09221527, y: 0.8840351, z: -0.19704491, w: -0.41370466}
     speed: 2
     m_Value: {x: -0.09221527, y: 0.8840351, z: -0.19704491, w: -0.41370466}
   m_Size:
-    m_Target: 366.32968
+    m_Target: 450.2279
     speed: 2
-    m_Value: 366.32968
+    m_Value: 450.2279
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -559,20 +559,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Resources
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Resources
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Leem\Desktop\Finale\Project Cryptids\Cryptid Final
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 84}
-    m_SelectedIDs: 96120000
-    m_LastClickedID: 4758
-    m_ExpandedIDs: 00000000961200003213000086140000c8160000021a0000be1a0000b21b0000c81c0000801d00002c1e0000821e0000e4220000482500007a250000b2530000b4530000b6530000b853000000ca9a3b
+    m_SelectedIDs: 841e0000
+    m_LastClickedID: 7812
+    m_ExpandedIDs: 00000000981200003413000088140000ca160000041a0000c01a0000b41b0000ca1c0000821d00002e1e0000841e0000e62200004a2500007c250000fc520000fe520000005300000253000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -600,7 +600,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000961200003213000086140000c8160000021a0000be1a0000b21b0000c81c0000801d00002c1e0000821e0000e4220000482500007a250000b2530000b4530000b6530000b8530000
+    m_ExpandedIDs: 00000000981200003413000088140000ca160000041a0000c01a0000b41b0000ca1c0000821d00002e1e0000841e0000e62200004a2500007c250000fc520000fe5200000053000002530000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

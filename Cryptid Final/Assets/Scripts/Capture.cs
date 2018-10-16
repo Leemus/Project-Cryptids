@@ -15,6 +15,7 @@ public class Capture : MonoBehaviour {
     public float[] range;
     public int size = 10;
     public Flowchart camDev;
+    float add = 1;
     public static float file = -1;
     public AudioSource click;
     public bool hasFilm;
@@ -31,7 +32,7 @@ public class Capture : MonoBehaviour {
       return string.Format("{0}/Resources/Photo{1}.png",
                        Application.dataPath, file += 1);
 
-        AssetDatabase.Refresh();
+        
 
 
     }
@@ -51,7 +52,7 @@ public class Capture : MonoBehaviour {
 
         }
         photocap |= Input.GetMouseButtonDown(0);
-        if (photocap && camOn == true)
+        if (photocap && camOn == true && hasFilm == true)
         {
             RenderTexture rt = new RenderTexture(Width, Height, 24);
             camera.targetTexture = rt;
@@ -61,31 +62,29 @@ public class Capture : MonoBehaviour {
             screenShot.ReadPixels(new Rect(0, 0, Width, Height), 0, 0);
             camera.targetTexture = null;
             RenderTexture.active = null;
+
+            camDev.SetFloatVariable("camPhotos", add++);
             Destroy(rt);
             byte[] bytes = screenShot.EncodeToPNG();
             string filename = ScreenShotName(Width, Height);
             System.IO.File.WriteAllBytes(filename, bytes);
             Debug.Log(string.Format("Took screenshot to: {0}", filename));
             photocap = false;
-            click.Play();
+           // click.Play();
         }
 
-        if (Input.GetMouseButton(0) && camOn == true && hasFilm == true)
-        {
-
-          camDev.SetFloatVariable("camPhotos", +1);
-        }
+        
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            camOn = false;
+            camOn = true ;
 
 
 
         }
          if (Input.GetKeyDown(KeyCode.Q))
         {
-            camOn = true;
+            camOn = false;
 
 
 
