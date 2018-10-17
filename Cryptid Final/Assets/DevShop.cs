@@ -9,6 +9,7 @@ public class DevShop : MonoBehaviour {
     public Flowchart dev;
     public Flowchart collect;
     public Camera devCam;
+    public bool havePhoto;
     public GameObject hasPhotos0,hasPhotos1,hasPhotos2;
     public RawImage hasPhotos00, hasPhotos01, hasPhotos02;
     // Use this for initialization
@@ -19,7 +20,28 @@ public class DevShop : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(dev.GetBooleanVariable("startConvo") == true)
+        if(havePhoto == true)
+        {
+            if (dev.GetFloatVariable("camPhotos") >= 0)
+            {
+                hasPhotos00.texture = Resources.Load<Texture2D>("Resources/Photo0)");
+            }
+            if (dev.GetFloatVariable("camPhotos") >= 1)
+            {
+                hasPhotos00.texture = Resources.Load<Texture2D>("Resources/Photo1)");
+            }
+            if (dev.GetFloatVariable("camPhotos") >= 2)
+            {
+                hasPhotos00.texture = Resources.Load<Texture2D>("Resources/Photo2)");
+            }
+
+
+        }
+
+
+
+
+        if (dev.GetBooleanVariable("startConvo") == true)
         {
             devCam.enabled = true;
 
@@ -35,7 +57,7 @@ public class DevShop : MonoBehaviour {
             AssetDatabase.Refresh();
             if(dev.GetFloatVariable("camPhotos") >= 0)
             {
-                hasPhotos00.texture = Resources.Load<Texture2D>("Resources/Photo0)");
+                havePhoto = true;
 
                 hasPhotos0.active = true;
                 
@@ -44,13 +66,13 @@ public class DevShop : MonoBehaviour {
             }
             if(dev.GetFloatVariable("camPhotos") >= 1)
             {
-                hasPhotos01.texture = Resources.Load<Texture2D>("Photo1)");
+                havePhoto = true;
 
                 hasPhotos1.active = true;
             }
             if(dev.GetFloatVariable("camPhotos") >= 2)
             {
-                hasPhotos02.texture = Resources.Load<Texture2D>("Photo2)");
+                havePhoto = true;
                 hasPhotos2.active = true;
 
             }
