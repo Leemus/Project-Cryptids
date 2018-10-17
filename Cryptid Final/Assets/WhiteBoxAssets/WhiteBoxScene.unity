@@ -17335,7 +17335,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1419344550
 Prefab:
@@ -17803,7 +17803,7 @@ Transform:
   - {fileID: 1754661029}
   - {fileID: 1099545114}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1604575993
 GameObject:
@@ -17987,12 +17987,16 @@ MonoBehaviour:
   dev: {fileID: 1262449585}
   collect: {fileID: 1413427104}
   devCam: {fileID: 2043071353}
+  havePhoto: 0
   hasPhotos0: {fileID: 1272780287}
   hasPhotos1: {fileID: 1200590045}
   hasPhotos2: {fileID: 240958349}
   hasPhotos00: {fileID: 1272780289}
   hasPhotos01: {fileID: 1200590047}
   hasPhotos02: {fileID: 240958351}
+  photo0: {fileID: 0}
+  photo1: {fileID: 0}
+  photo2: {fileID: 0}
 --- !u!1001 &1689782341
 Prefab:
   m_ObjectHideFlags: 0
