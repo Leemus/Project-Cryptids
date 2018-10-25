@@ -23,7 +23,7 @@ public class DevShop : MonoBehaviour {
 	void Update () {
        
 
-
+        
 
         if (dev.GetBooleanVariable("startConvo") == true)
         {
@@ -44,7 +44,7 @@ public class DevShop : MonoBehaviour {
                 Debug.Log("lol");
 
                 hasPhotos0.active = true;
-                photo0 = (Texture)UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Resources/Photo0.png", typeof(Texture));
+                photo0 = (Texture)AssetDatabase.LoadAssetAtPath("Assets/Resources/Photo0.png", typeof(Texture));
                 hasPhotos00.texture = photo0;
 
 
@@ -54,7 +54,7 @@ public class DevShop : MonoBehaviour {
                 havePhoto = true;
 
                 hasPhotos1.active = true;
-                photo1 = (Texture)UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Resources/Photo1.png", typeof(Texture));
+                photo1 = (Texture)AssetDatabase.LoadAssetAtPath("Assets/Resources/Photo1.png", typeof(Texture));
                 ;
                 hasPhotos01.texture = photo1;
             }
@@ -62,7 +62,7 @@ public class DevShop : MonoBehaviour {
             {
                 havePhoto = true;
                 hasPhotos2.active = true;
-                photo2 = (Texture)UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Resources/Photo2.png", typeof(Texture));
+                photo2 = (Texture)AssetDatabase.LoadAssetAtPath("Assets/Resources/Photo2.png", typeof(Texture));
                 hasPhotos02.texture = photo2;
             }
             
