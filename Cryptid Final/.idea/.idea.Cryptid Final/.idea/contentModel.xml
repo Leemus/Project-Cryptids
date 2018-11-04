@@ -1013,6 +1013,7 @@
             </e>
           </e>
         </e>
+        <e p="pointValue.cs" t="Include" />
         <e p="PostProcessing" t="Include">
           <e p="Editor" t="Include">
             <e p="Attributes" t="Include">

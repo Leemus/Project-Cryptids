@@ -13,46 +13,37 @@ public class CameraRay : MonoBehaviour {
 	public GameObject botLeftOr;
 
 	public GameObject botRightOr;
+	public float points;
 	// Use this for initialization
 	void Start () {
 		
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	void Update ()
+	{
+		RaycastHit hit;
 		Vector3 forward = transform.TransformDirection(Vector3.forward) * 10;
 		Debug.DrawRay(topLeftOr.transform.position, forward, Color.green);
 		Debug.DrawRay(topRightOr.transform.position, forward, Color.blue);
 		Debug.DrawRay(botLeftOr.transform.position, forward, Color.yellow);
 		Debug.DrawRay(botRightOr.transform.position, forward, Color.magenta);
 
-		if (Physics.Raycast(topLeftOr.transform.position, topLeftOr.transform.forward, 10))
+		if (Physics.Raycast(topLeftOr.transform.position, topLeftOr.transform.forward, out hit))
 		{
+			if (hit.collider.tag == "NPC")
+			{
 
-		  c1.material.color = new Color(5,1,3);
-			c2.material.color = new Color(5,1,3);
-			c3.material.color = new Color(5,1,3);
-			c4.material.color = new Color(5,1,3);
-			c5.material.color = new Color(5,1,3);
-			c6.material.color = new Color(5,1,3);
-			c7.material.color = new Color(5,1,3);
-			c8.material.color = new Color(5,1,3);
-			c9.material.color = new Color(5,1,3);
+				//Debug.Log("This is an NPC");
+				points += 20;
+				Debug.Log("This is the point value" + points);
+
+			}
 
 		}
 		else
 		{
-			c1.material.color = new Color(0,0,0);
-			c2.material.color = new Color(0,0,0);
-			c3.material.color = new Color(0,0,0);
-			c4.material.color = new Color(0,0,0);
-			c4.material.color = new Color(0,0,0);
-			c5.material.color = new Color(0,0,0);
-			c6.material.color = new Color(0,0,0);
-			c7.material.color = new Color(0,0,0);
-			c8.material.color = new Color(0,0,0);
-			c9.material.color = new Color(0,0,0);
+		
 		}
 	}
 }
