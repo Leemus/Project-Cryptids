@@ -11,7 +11,7 @@ public class CameraRay : MonoBehaviour {
 	public GameObject topRightOr;
 
 	public GameObject botLeftOr;
-
+	public float length = 10;
 	public GameObject botRightOr;
 	public float points;
 	// Use this for initialization
@@ -23,6 +23,7 @@ public class CameraRay : MonoBehaviour {
 	void Update ()
 	{
 		RaycastHit hit;
+		
 		Vector3 forward = transform.TransformDirection(Vector3.forward) * 10;
 		Debug.DrawRay(topLeftOr.transform.position, forward, Color.green);
 		Debug.DrawRay(topRightOr.transform.position, forward, Color.blue);
@@ -31,11 +32,12 @@ public class CameraRay : MonoBehaviour {
 
 		if (Physics.Raycast(topLeftOr.transform.position, topLeftOr.transform.forward, out hit))
 		{
-			if (hit.collider.tag == "NPC")
+			hit.distance = length;
+			if (hit.collider.tag == "5")
 			{
 
 				//Debug.Log("This is an NPC");
-				points += 20;
+				points += 5;
 				Debug.Log("This is the point value" + points);
 
 			}
@@ -43,7 +45,40 @@ public class CameraRay : MonoBehaviour {
 		}
 		else
 		{
-		
+			points = 0;
 		}
+		
+		if (hit.collider.tag == "15")
+		{
+
+			//Debug.Log("This is an NPC");
+			points += 15;
+			Debug.Log("This is the point value" + points);
+
+		}
+		
+		else
+		{
+			points = 0;
+		}
+		
+		if (hit.collider.tag == "10")
+		{
+
+			//Debug.Log("This is an NPC");
+			points += 10;
+			Debug.Log("This is the point value" + points);
+
+		}
+		
+		else
+		{
+			points = 0;
+		}
+
 	}
-}
+	
+	
+	
+	}
+

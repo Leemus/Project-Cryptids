@@ -948,6 +948,39 @@ Prefab:
       propertyPath: camDev
       value: 
       objectReference: {fileID: 1262449585}
+    - target: {fileID: 114008144400838172, guid: f9020029464b84c40bc6978a6d9a03b2,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409448879290778, guid: f9020029464b84c40bc6978a6d9a03b2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.2816896
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409448879290778, guid: f9020029464b84c40bc6978a6d9a03b2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0.00000004219148
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409448879290778, guid: f9020029464b84c40bc6978a6d9a03b2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0.000000075283914
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409448879290778, guid: f9020029464b84c40bc6978a6d9a03b2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.9595056
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409448879290778, guid: f9020029464b84c40bc6978a6d9a03b2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409448879290778, guid: f9020029464b84c40bc6978a6d9a03b2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.7299998
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409448879290778, guid: f9020029464b84c40bc6978a6d9a03b2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -3.0000002
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9020029464b84c40bc6978a6d9a03b2, type: 2}
   m_IsPrefabAsset: 0
@@ -7875,7 +7908,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 173.2621, y: 62.644356}
+  scrollPos: {x: -5.426342, y: 23.300114}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -7887,10 +7920,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1262449593}
+  - {fileID: 1262449625}
   selectedCommands:
-  - {fileID: 1262449599}
-  - {fileID: 0}
+  - {fileID: 1262449620}
   variables:
   - {fileID: 1262449586}
   - {fileID: 1262449596}
@@ -9385,6 +9417,7 @@ GameObject:
   - component: {fileID: 1272780288}
   - component: {fileID: 1272780290}
   - component: {fileID: 1272780289}
+  - component: {fileID: 1272780291}
   m_Layer: 5
   m_Name: RawImage
   m_TagString: Untagged
@@ -9443,6 +9476,17 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1272780287}
   m_CullTransparentMesh: 0
+--- !u!114 &1272780291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1272780287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ca0b9e65d724b045b42d314d2e32d07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1285081433 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 453888, guid: 6e2e5a60179bbe147bb39ecf08436cee,
@@ -15021,7 +15065,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1262449585}
+  selectedFlowchart: {fileID: 1413427104}
 --- !u!4 &1423288958
 Transform:
   m_ObjectHideFlags: 1
