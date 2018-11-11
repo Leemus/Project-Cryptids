@@ -1327,6 +1327,7 @@
           <e p="CamSwitch.cs" t="Include" />
           <e p="Capture.cs" t="Include" />
           <e p="ClickMe.cs" t="Include" />
+          <e p="DayCycle.cs" t="Include" />
           <e p="DevShop.cs" t="Include" />
           <e p="Focus.cs" t="Include" />
           <e p="LookAtMe.cs" t="Include" />

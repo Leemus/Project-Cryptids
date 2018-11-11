@@ -5,17 +5,18 @@ using UnityEngine;
 public class CameraRay : MonoBehaviour {
   //  public RaycastHit hitr;
   //  public GameObject test;
-	public Renderer c1, c2, c3, c4, c5, c6, c7, c8, c9;
+	//public Renderer c1, c2, c3, c4, c5, c6, c7, c8, c9;
 	public GameObject topLeftOr;
 
 	public GameObject topRightOr;
 
 	public GameObject botLeftOr;
-	public float length = 10;
+	public float length = 100;
 	public GameObject botRightOr;
+	
 
 	public GameObject midOr;
-	public float points;
+    float points;
 	// Use this for initialization
 	void Start () {
 		
@@ -40,8 +41,8 @@ public class CameraRay : MonoBehaviour {
 			{
 
 				//Debug.Log("This is an NPC");
-				points += ValuedObject.valuePoint;
-				Debug.Log("This is the point value" + points);
+				//points += ValuedObject.valuePoint;
+			//	Debug.Log("This is the point value" + points);
 
 			}
 
@@ -50,9 +51,8 @@ public class CameraRay : MonoBehaviour {
 		{
 			points = 0;
 		}
-		
-	
 
+		
 	}
 	
 	
