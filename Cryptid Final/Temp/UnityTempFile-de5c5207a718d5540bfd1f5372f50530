@@ -854,6 +854,7 @@ Assets/Scripts/CameraRay.cs
 Assets/Scripts/CamSwitch.cs
 Assets/Scripts/Capture.cs
 Assets/Scripts/ClickMe.cs
+Assets/Scripts/DayCycle.cs
 Assets/Scripts/DevShop.cs
 Assets/Scripts/Focus.cs
 Assets/Scripts/LookAtMe.cs

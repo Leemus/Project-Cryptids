@@ -11,7 +11,7 @@ public class Focus : MonoBehaviour {
     float zoomout = 13.7f;
     float zoomin = 56.7f;
     bool down = false;
-    bool zoom = false;
+    static bool zoom = false;
     // Use this for initialization
     void Start () {
 		
@@ -23,8 +23,8 @@ public class Focus : MonoBehaviour {
         var dof = cam.depthOfField.settings;
         dof.focusDistance = val;
         cam.depthOfField.settings = dof;
+	    
         
-      
         if (down == true && scroll > 0)
         {
             
@@ -40,7 +40,7 @@ public class Focus : MonoBehaviour {
 
         }
 
-        if(zoom == true && scroll > 0)
+        if(Input.GetKeyDown(KeyCode.W))
         {
 
             photo.focalLength += 0.5f;
@@ -48,7 +48,7 @@ public class Focus : MonoBehaviour {
 
         }
 
-        if(zoom == true && scroll < 0)
+        if(Input.GetKeyDown(KeyCode.S))
         {
             photo.focalLength -= 0.5f;
 

@@ -1,24 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Characters.ThirdPerson;
 
 public class CamSwitch : MonoBehaviour {
 
     public Camera mainCam;
     public Camera photoCam;
     public Camera invCam;
-   
-
+    public ThirdPersonUserControl player;
+  //  public Animator playerani;
 
     // Use this for initialization
     void Start()
     {
+        player = GetComponent<ThirdPersonUserControl>();
         mainCam.enabled = true;
         photoCam.enabled = false;
         invCam.enabled = false;
-    
-   
-   
+        player.enabled = true;
+       // playerani.enabled = true;
+
     }
 
     // Update is called once per frame
@@ -31,7 +33,8 @@ public class CamSwitch : MonoBehaviour {
             mainCam.enabled = false;
             photoCam.enabled = true;
             invCam.enabled = false;
-
+            player.enabled = false;
+           // playerani.enabled = false;
 
         }
 
@@ -41,7 +44,8 @@ public class CamSwitch : MonoBehaviour {
             mainCam.enabled = true;
             photoCam.enabled = false;
             invCam.enabled = false;
-
+            player.enabled = true;
+           // playerani.enabled = true;
 
         }
 
@@ -51,7 +55,8 @@ public class CamSwitch : MonoBehaviour {
             mainCam.enabled = false;
             photoCam.enabled = false;
             invCam.enabled = true;
-
+            player.enabled = true;
+           // playerani.enabled = true;
         }
 
    
