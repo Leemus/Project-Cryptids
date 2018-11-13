@@ -19,6 +19,7 @@ public class Capture : MonoBehaviour {
     public static float file = -1;
     public AudioSource click;
     public bool hasFilm;
+
     
             
     private bool photocap = false;
@@ -54,6 +55,7 @@ public class Capture : MonoBehaviour {
         photocap |= Input.GetMouseButtonDown(0);
         if (photocap && camOn == true && hasFilm == true)
         {
+            DevShop.goodbye += 1;
             RenderTexture rt = new RenderTexture(Width, Height, 24);
             camera.targetTexture = rt;
             Texture2D screenShot = new Texture2D(Width, Height, TextureFormat.RGB24, false);

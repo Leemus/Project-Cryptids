@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class pointValue : MonoBehaviour
 {
-	
+	public static float points;
 	
 	// Use this for initialization
 	void Start () {
