@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class pointValue : MonoBehaviour
 {
-	public static float points;
+	public  float points;
 	
 	// Use this for initialization
 	void Start () {
@@ -12,7 +12,9 @@ public class pointValue : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
+		points = DevShop.points;
 		
 	}
 }

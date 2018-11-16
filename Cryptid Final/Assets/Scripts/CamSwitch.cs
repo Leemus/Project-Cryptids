@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Resources;
 using UnityEditor;
 using UnityEngine;
 using UnityStandardAssets.Characters.ThirdPerson;
@@ -10,6 +11,7 @@ public class CamSwitch : MonoBehaviour {
     public Camera photoCam;
     public Camera invCam;
     public ThirdPersonUserControl player;
+    
   //  public Animator playerani;
 
     // Use this for initialization
@@ -58,7 +60,10 @@ public class CamSwitch : MonoBehaviour {
             invCam.enabled = true;
             player.enabled = true;
            // playerani.enabled = true;
-            AssetDatabase.Refresh();
+       
+          
+
+
         }
 
    

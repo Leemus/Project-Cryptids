@@ -10,13 +10,16 @@ public class DevShop : MonoBehaviour {
     public Flowchart collect;
     public Camera devCam;
     public bool havePhoto;
-    public GameObject hasPhotos0,hasPhotos1,hasPhotos2;
-    public RawImage hasPhotos00, hasPhotos01, hasPhotos02;
-    public Texture photo0, photo1, photo2;
+    public GameObject hasPhotos0,hasPhotos1,hasPhotos2, hasPhotos3, hasPhotos4,hasPhotos5,hasPhotos6,hasPhotos7,hasPhotos8,hasPhotos9,hasPhotos10,hasPhotos11,hasPhotos12;
+    public RawImage hasPhotos00, hasPhotos01, hasPhotos02,hasPhotos03, hasPhotos04,hasPhotos05,hasPhotos06,hasPhotos07,hasPhotos08,hasPhotos09,hasPhotos010,hasPhotos011,hasPhotos012;
+    public Texture photo0, photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9, photo10, photo11, photo12;
     public static float goodbye = 0;
+	public static float points;
+	
     // Use this for initialization
     void Start () {
         devCam.enabled = false;
+	  
         collect.enabled = false;
 	}
 	
@@ -76,8 +79,9 @@ public class DevShop : MonoBehaviour {
 	      //  Debug.Log("lol");
 
 	        hasPhotos0.active = true;
-	        photo0 = (Texture)AssetDatabase.LoadAssetAtPath("Assets/Resources/Photo0.png", typeof(Texture));
+		    photo0 = Resources.Load<Texture2D>("Photos/Photo0");
 	        hasPhotos00.texture = photo0;
+		   // this.hasPhotos00.points = CameraRay.total;
 
 
 	    }
@@ -86,19 +90,93 @@ public class DevShop : MonoBehaviour {
 	        havePhoto = true;
 
 	        hasPhotos1.active = true;
-	        photo1 = (Texture)AssetDatabase.LoadAssetAtPath("Assets/Resources/Photo1.png", typeof(Texture));
-	        ;
+	      //  photo1 = (Texture)AssetDatabase.LoadAssetAtPath("Assets/Resources/Photo1.png", typeof(Texture));
+	        ;photo1 = Resources.Load<Texture2D>("Photos/Photo1");
 	        hasPhotos01.texture = photo1;
-		    pointValue.points = CameraRay.total;
+		  
 	    }
 	    if(goodbye >= 2)
 	    {
 	    
 	        hasPhotos2.active = true;
-	        photo2 = (Texture)AssetDatabase.LoadAssetAtPath("Assets/Resources/Photo2.png", typeof(Texture));
+	      //  photo2 = (Texture)AssetDatabase.LoadAssetAtPath("Assets/Resources/Photo2.png", typeof(Texture));
 	        hasPhotos02.texture = photo2;
+		    photo2 = Resources.Load<Texture2D>("Photos/Photo2");
 	    }
-
+        
+		if(goodbye >= 3)
+		{
+	    
+			hasPhotos2.active = true;
+			//  photo2 = (Texture)AssetDatabase.LoadAssetAtPath("Assets/Resources/Photo2.png", typeof(Texture));
+			hasPhotos02.texture = photo2;
+			photo2 = Resources.Load<Texture2D>("Photo2");
+		}
+		if(goodbye >= 4)
+		{
+	    
+			hasPhotos2.active = true;
+			//  photo2 = (Texture)AssetDatabase.LoadAssetAtPath("Assets/Resources/Photo2.png", typeof(Texture));
+			hasPhotos02.texture = photo2;
+			photo2 = Resources.Load<Texture2D>("Photo2");
+		}
+		if(goodbye >= 5)
+		{
+	    
+			hasPhotos2.active = true;
+			//  photo2 = (Texture)AssetDatabase.LoadAssetAtPath("Assets/Resources/Photo2.png", typeof(Texture));
+			hasPhotos02.texture = photo2;
+			photo2 = Resources.Load<Texture2D>("Photo2");
+		}
+		if(goodbye >= 6)
+		{
+	    
+			hasPhotos2.active = true;
+			//  photo2 = (Texture)AssetDatabase.LoadAssetAtPath("Assets/Resources/Photo2.png", typeof(Texture));
+			hasPhotos02.texture = photo2;
+			photo2 = Resources.Load<Texture2D>("Photo2");
+		}
+		if(goodbye >= 2)
+		{
+	    
+			hasPhotos2.active = true;
+			//  photo2 = (Texture)AssetDatabase.LoadAssetAtPath("Assets/Resources/Photo2.png", typeof(Texture));
+			hasPhotos02.texture = photo2;
+			photo2 = Resources.Load<Texture2D>("Photo2");
+		}
+		if(goodbye >= 2)
+		{
+	    
+			hasPhotos2.active = true;
+			//  photo2 = (Texture)AssetDatabase.LoadAssetAtPath("Assets/Resources/Photo2.png", typeof(Texture));
+			hasPhotos02.texture = photo2;
+			photo2 = Resources.Load<Texture2D>("Photo2");
+		}
+		if(goodbye >= 2)
+		{
+	    
+			hasPhotos2.active = true;
+			//  photo2 = (Texture)AssetDatabase.LoadAssetAtPath("Assets/Resources/Photo2.png", typeof(Texture));
+			hasPhotos02.texture = photo2;
+			photo2 = Resources.Load<Texture2D>("Photo2");
+		}
+		if(goodbye >= 2)
+		{
+	    
+			hasPhotos2.active = true;
+			//  photo2 = (Texture)AssetDatabase.LoadAssetAtPath("Assets/Resources/Photo2.png", typeof(Texture));
+			hasPhotos02.texture = photo2;
+			photo2 = Resources.Load<Texture2D>("Photo2");
+		}
+		if(goodbye >= 2)
+		{
+	    
+			hasPhotos2.active = true;
+			//  photo2 = (Texture)AssetDatabase.LoadAssetAtPath("Assets/Resources/Photo2.png", typeof(Texture));
+			hasPhotos02.texture = photo2;
+			photo2 = Resources.Load<Texture2D>("Photo2");
+			
+		}
      /*   if(dev.GetBooleanVariable("photoReady") == true)
         {
 

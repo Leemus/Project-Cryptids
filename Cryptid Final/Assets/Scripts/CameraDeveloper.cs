@@ -26,7 +26,7 @@ public class CameraDeveloper : MonoBehaviour {
 
         if (cameraDev.GetBooleanVariable("photosCollected") == true)
         {
-            AssetDatabase.Refresh();
+          //  AssetDatabase.Refresh();
 
         }
 

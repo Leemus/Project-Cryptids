@@ -30,7 +30,7 @@ public class Capture : MonoBehaviour {
 
 
 
-      return string.Format("{0}/Resources/Photo{1}.png",
+      return string.Format("{0}/Resources/Photos/Photo{1}.png",
                        Application.dataPath, file += 1);
 
         
@@ -40,7 +40,7 @@ public class Capture : MonoBehaviour {
    
     public void Update()
     {
-        if (camDev.GetBooleanVariable("hasPhotos") == true)
+     /*   if (camDev.GetBooleanVariable("hasPhotos") == true)
         {
 
             hasFilm = false;
@@ -52,8 +52,9 @@ public class Capture : MonoBehaviour {
             hasFilm = true;
 
         }
+        */
         photocap |= Input.GetMouseButtonDown(0);
-        if (photocap && camOn == true && hasFilm == true)
+        if (photocap && camOn == true) //&& hasFilm == true)
         {
             DevShop.goodbye += 1;
             RenderTexture rt = new RenderTexture(Width, Height, 24);
@@ -64,8 +65,8 @@ public class Capture : MonoBehaviour {
             screenShot.ReadPixels(new Rect(0, 0, Width, Height), 0, 0);
             camera.targetTexture = null;
             RenderTexture.active = null;
-
-            camDev.SetFloatVariable("camPhotos", add++);
+           // PlayerPrefs.SetFloat("points", DevShop.points);
+           // camDev.SetFloatVariable("camPhotos", add++);
             Destroy(rt);
             byte[] bytes = screenShot.EncodeToPNG();
             string filename = ScreenShotName(Width, Height);
@@ -89,6 +90,12 @@ public class Capture : MonoBehaviour {
             camOn = false;
 
 
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            camOn = false;
 
         }
     }
