@@ -60,7 +60,7 @@ public class CamSwitch : MonoBehaviour {
             invCam.enabled = true;
             player.enabled = true;
            // playerani.enabled = true;
-       
+       AssetDatabase.Refresh();
           
 
 

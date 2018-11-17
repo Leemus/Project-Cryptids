@@ -5,13 +5,14 @@ using UnityEngine;
 using UnityEditor;
 using Fungus;
 using System;
+using System.Xml;
 
 public class Capture : MonoBehaviour {
     public static int Width = 1920;
     public static int Height = 1080;
     public Camera camera;
     public bool camOn;
-    public RawImage[] canvas;
+    public RawImage canvas;
     public float[] range;
     public int size = 10;
     public Flowchart camDev;
@@ -25,18 +26,18 @@ public class Capture : MonoBehaviour {
     private bool photocap = false;
 
 
-  public static string ScreenShotName(int width, int height)
-    {
+ public static string ScreenShotName(int width, int height)
+   {
 
 
 
       return string.Format("{0}/Resources/Photos/Photo{1}.png",
-                       Application.dataPath, file += 1);
+                      Application.dataPath, file += 1);
 
         
 
 
-    }
+   }
    
     public void Update()
     {
@@ -73,7 +74,8 @@ public class Capture : MonoBehaviour {
             System.IO.File.WriteAllBytes(filename, bytes);
             Debug.Log(string.Format("Took screenshot to: {0}", filename));
             photocap = false;
-           // click.Play();
+            
+            // click.Play();
         }
 
         
