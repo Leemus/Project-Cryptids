@@ -29,8 +29,8 @@ public class CameraRay : MonoBehaviour {
 	{
 		total = pointsr1 + pointsr2 + pointsr3 + pointsr4 + pointsr5 + pointsr6 + pointsr7;
 		RaycastHit hit;
-	   // Debug.Log("points" + total);
-		Vector3 forward = transform.TransformDirection(Vector3.forward) * 10;
+	    Debug.Log("points" + total);
+		Vector3 forward = transform.TransformDirection(Vector3.forward) * 20;
 		Debug.DrawRay(topLeftOr.transform.position, forward, Color.green);
 		Debug.DrawRay(topRightOr.transform.position, forward, Color.blue);
 		Debug.DrawRay(botLeftOr.transform.position, forward, Color.yellow);

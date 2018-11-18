@@ -1033,6 +1033,7 @@
             </e>
           </e>
         </e>
+        <e p="fungusPoints.cs" t="Include" />
         <e p="Patrol.cs" t="Include" />
         <e p="pointValue.cs" t="Include" />
         <e p="pointValues.cs" t="Include" />
@@ -1394,6 +1395,7 @@
           <e p="Focus.cs" t="Include" />
           <e p="LookAtMe.cs" t="Include" />
         </e>
+        <e p="TextMe.cs" t="Include" />
         <e p="ValuedObject.cs" t="Include" />
         <e p="WhiteBoxAssets" t="Include">
           <e p="BOXOPHOBIC" t="Include">

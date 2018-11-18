@@ -56,6 +56,10 @@ public class Patrol : MonoBehaviour
 			flowy.SendFungusMessage("stop");
 
 		}
+		else
+		{
+			speed = 2;
+		}
 		
 	}
 	

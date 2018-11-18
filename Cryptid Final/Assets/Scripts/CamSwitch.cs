@@ -13,7 +13,7 @@ public class CamSwitch : MonoBehaviour {
     public Camera invCam;
     public FirstPersonDrifter player;
     public MouseLook me;
-    public Button but;
+    public Button but1,but2,but3,but4,but5,but6;
 
   //  public Animator playerani;
 
@@ -26,7 +26,12 @@ public class CamSwitch : MonoBehaviour {
         invCam.enabled = false;
         player.enabled = true;
         me.enabled = true;
-        but.enabled = true;
+        but1.enabled = true;
+        but2.enabled = true;
+        but3.enabled = true;
+        but4.enabled = true;
+        but5.enabled = true;
+        but6.enabled = true;
 
         // playerani.enabled = true;
 
@@ -44,7 +49,12 @@ public class CamSwitch : MonoBehaviour {
             invCam.enabled = false;
             player.enabled = false;
             me.enabled = false;
-            but.enabled = true;
+            but1.enabled = true;
+            but2.enabled = true;
+            but3.enabled = true;
+            but4.enabled = true;
+            but5.enabled = true;
+            but6.enabled = true;
             // playerani.enabled = false;
 
         }
@@ -57,7 +67,12 @@ public class CamSwitch : MonoBehaviour {
             invCam.enabled = false;
             player.enabled = true;
             me.enabled = true;
-            but.enabled = true;
+            but1.enabled = true;
+            but2.enabled = true;
+            but3.enabled = true;
+            but4.enabled = true;
+            but5.enabled = true;
+            but6.enabled = true;
             // playerani.enabled = true;
 
         }
@@ -70,7 +85,12 @@ public class CamSwitch : MonoBehaviour {
             invCam.enabled = true;
             player.enabled = false;
             me.enabled = false;
-            but.enabled = false;
+            but1.enabled = false;
+            but2.enabled = false;
+            but3.enabled = false;
+            but4.enabled = false;
+            but5.enabled = false;
+            but6.enabled = false;
            // playerani.enabled = true;
        AssetDatabase.Refresh();
           
