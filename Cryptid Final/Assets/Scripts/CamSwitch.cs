@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Resources;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityStandardAssets.Characters.ThirdPerson;
 
 public class CamSwitch : MonoBehaviour {
@@ -10,19 +11,24 @@ public class CamSwitch : MonoBehaviour {
     public Camera mainCam;
     public Camera photoCam;
     public Camera invCam;
-    public ThirdPersonUserControl player;
-    
+    public FirstPersonDrifter player;
+    public MouseLook me;
+    public Button but;
+
   //  public Animator playerani;
 
     // Use this for initialization
     void Start()
     {
-        player = GetComponent<ThirdPersonUserControl>();
+        player = GetComponent<FirstPersonDrifter>();
         mainCam.enabled = true;
         photoCam.enabled = false;
         invCam.enabled = false;
         player.enabled = true;
-       // playerani.enabled = true;
+        me.enabled = true;
+        but.enabled = true;
+
+        // playerani.enabled = true;
 
     }
 
@@ -37,7 +43,9 @@ public class CamSwitch : MonoBehaviour {
             photoCam.enabled = true;
             invCam.enabled = false;
             player.enabled = false;
-           // playerani.enabled = false;
+            me.enabled = false;
+            but.enabled = true;
+            // playerani.enabled = false;
 
         }
 
@@ -48,7 +56,9 @@ public class CamSwitch : MonoBehaviour {
             photoCam.enabled = false;
             invCam.enabled = false;
             player.enabled = true;
-           // playerani.enabled = true;
+            me.enabled = true;
+            but.enabled = true;
+            // playerani.enabled = true;
 
         }
 
@@ -58,7 +68,9 @@ public class CamSwitch : MonoBehaviour {
             mainCam.enabled = false;
             photoCam.enabled = false;
             invCam.enabled = true;
-            player.enabled = true;
+            player.enabled = false;
+            me.enabled = false;
+            but.enabled = false;
            // playerani.enabled = true;
        AssetDatabase.Refresh();
           

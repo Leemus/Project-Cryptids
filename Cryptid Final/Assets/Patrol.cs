@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Fungus;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Patrol : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class Patrol : MonoBehaviour
 	public Transform[] moveSpots;
 	public Flowchart flowy;
 	private int randomSpots;
+
+	public Camera cam;
 	// Use this for initialization
 	void Start ()
 	{
@@ -35,6 +38,14 @@ public class Patrol : MonoBehaviour
 				waitTime = Time.deltaTime;
 			}
 		}
+
+
+		if (flowy.GetBooleanVariable("UI") == true)
+		{
+			cam.enabled = true;
+
+		}
+		
 	}
 
 	void OnTriggerEnter(Collider other)
@@ -42,6 +53,7 @@ public class Patrol : MonoBehaviour
 		if (other.gameObject.tag == "Player")
 		{
 			speed = 0;
+			flowy.SendFungusMessage("stop");
 
 		}
 		
